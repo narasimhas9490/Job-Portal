@@ -28,6 +28,7 @@ public class JobPostActivityService {
         List<RecruiterJobsDto> recruiterJobsDtoList = new ArrayList<>();
 
         for (IRecruiterJobs rec : recruiterJobsDto) {
+        	System.out.println(rec.getLocationId()) ;
             JobLocation loc = new JobLocation(rec.getLocationId(), rec.getCity(), rec.getState(), rec.getCountry());
             JobCompany comp = new JobCompany(rec.getCompanyId(), rec.getName(), "");
             recruiterJobsDtoList.add(new RecruiterJobsDto(rec.getTotalCandidates(), rec.getJob_post_id(),
